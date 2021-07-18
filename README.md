@@ -114,3 +114,11 @@ entry1.grid(row=0, column=1)
 entry2.grid(row=1, column=1)
 ```
 
+## Dropdowns
+```py
+variable = StringVar(root)
+variable.set("1") # Le doy un valor inicial (puede ser cualquiera)
+
+a = OptionMenu(root, variable, "1", "2", "3", "4", "5")
+a.pack()
+```
