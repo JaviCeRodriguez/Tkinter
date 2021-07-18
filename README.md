@@ -48,3 +48,16 @@ msg_cmd.pack(side=TOP)
 ```
 
 Otro ejemplo: Contador de segundos (ver `examples/count.py`)
+
+### Frames
+Son marcos que se pueden utilizar para envolver otros widgets.
+```py
+frame = Frame(root, bd=2, relief="groove", padx=10, pady=10)
+frame.pack(side=BOTTOM)
+
+leftframe = Frame(root, bd=2, relief="groove", padx=10, pady=10)
+leftframe.pack(side=LEFT)
+
+rightframe = Frame(root, bd=2, relief="groove", padx=10, pady=10)
+rightframe.pack(side=RIGHT)
+```
