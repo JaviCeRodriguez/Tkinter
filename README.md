@@ -84,3 +84,22 @@ Checkbutton(root, text="Mujer", variable=var2).grid(row=1, sticky=W)
 ```
 
 Usando place es más intuitivo, grid es un poco más "complejo". Lo veremos más adelante
+
+
+## Radio buttons
+Similar a los checkboxes, solo que acá comparten la variable entera:
+```py
+# Una variable entera para los radio buttons
+radiovalue = IntVar()
+
+# Creo los radio buttons
+radio1 = Radiobutton(root, text="Enero", variable=radiovalue, value=1)
+radio2 = Radiobutton(root, text="Febrero", variable=radiovalue, value=2)
+radio3 = Radiobutton(root, text="Marzo", variable=radiovalue, value=3)
+
+# Los ubico con grid (prueben sin el argumento sticky)
+radio1.grid(row=0, column=0, sticky=W)
+radio2.grid(row=1, column=0, sticky=W)
+radio3.grid(row=2, column=0, sticky=W)
+```
+
