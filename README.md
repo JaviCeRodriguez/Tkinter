@@ -3,6 +3,12 @@ Un poco de lo que voy aprendiendo lo voy mostrando en este repositorio. *Todos l
 
 Sientanse libres de proponer cambios o ejemplos de código mediante un **pull request**!
 
+Algunos enlaces útiles para acompañar esto con teoría/documentación:
+- [Documentación oficial (Inglés)](https://docs.python.org/3/library/tkinter.html)
+- [Interfaces gráficas con Tkinter - Hektor Docs](https://docs.hektorprofe.net/python/interfaces-graficas-con-tkinter/)
+
+---
+
 ## Creación de ventana básica
 ```py
 from tkinter import *
@@ -61,3 +67,20 @@ leftframe.pack(side=LEFT)
 rightframe = Frame(root, bd=2, relief="groove", padx=10, pady=10)
 rightframe.pack(side=RIGHT)
 ```
+
+### Checkboxes
+Podemos definir checkboxes de las siguientes maneras:
+```py
+var1 = IntVar()
+var2 = IntVar()
+
+# Utilizando place
+Checkbutton(root, text="Hombre", variable=var1).place(x=50, y=50)
+Checkbutton(root, text="Mujer", variable=var2).place(x=50, y=80)
+
+# Utilizando grid
+Checkbutton(root, text="Hombre", variable=var1).grid(row=0, sticky=W)
+Checkbutton(root, text="Mujer", variable=var2).grid(row=1, sticky=W)
+```
+
+Usando place es más intuitivo, grid es un poco más "complejo". Lo veremos más adelante
