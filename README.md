@@ -152,3 +152,19 @@ for c, x in enumerate(colours):
     Label(text=x, relief=RIDGE, width=20).grid(row=c, column=0)
     Entry(bg=x, relief=SUNKEN, width=10).grid(row=c, column=1)
 ```
+
+### Place
+Por último, con place logramos posicionar los elementos en donde queramos.
+
+```py
+firstValueLabel = Label(root, text="Primer valor")
+firstValueLabel.place(x=10, y=10)
+firstValueEntry = Entry(root)
+firstValueEntry.place(x=120, y=10)
+
+secondValueLabel = Label(root, text="Segundo valor")
+secondValueLabel.place(x=10, y=40)
+secondValueEntry = Entry(root)
+secondValueEntry.place(x=120, y=40)
+```
+
