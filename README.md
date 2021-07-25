@@ -86,7 +86,7 @@ Checkbutton(root, text="Mujer", variable=var2).grid(row=1, sticky=W)
 Usando place es más intuitivo, grid es un poco más "complejo". Lo veremos más adelante
 
 
-## Radio buttons
+### Radio buttons
 Similar a los checkboxes, solo que acá comparten la variable entera:
 ```py
 # Una variable entera para los radio buttons
@@ -103,7 +103,7 @@ radio2.grid(row=1, column=0, sticky=W)
 radio3.grid(row=2, column=0, sticky=W)
 ```
 
-## Entries
+### Entries
 Simples campos de texto:
 
 ```py
@@ -114,7 +114,7 @@ entry1.grid(row=0, column=1)
 entry2.grid(row=1, column=1)
 ```
 
-## Dropdowns
+### Dropdowns
 ```py
 variable = StringVar(root)
 variable.set("1") # Le doy un valor inicial (puede ser cualquiera)
@@ -142,3 +142,13 @@ a = Label(root, text="Golang", bg="skyblue", fg="white")
 a.pack(fill=Y) # se expande en Y
 ```
 
+### Grid
+Con grid, podemos ubicar los widgets de una manera más sencilla según su posición en filas y columnas.
+
+```py
+colours = ('red','green','blue','white','orange')
+
+for c, x in enumerate(colours):
+    Label(text=x, relief=RIDGE, width=20).grid(row=c, column=0)
+    Entry(bg=x, relief=SUNKEN, width=10).grid(row=c, column=1)
+```
