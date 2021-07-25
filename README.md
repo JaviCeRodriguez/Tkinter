@@ -122,3 +122,23 @@ variable.set("1") # Le doy un valor inicial (puede ser cualquiera)
 a = OptionMenu(root, variable, "1", "2", "3", "4", "5")
 a.pack()
 ```
+
+
+## Geometry Management
+### Pack
+Con el método pack, nos preocupamos nada más de que nos pueda colocar el widget en la ventana según los parámetros que les pasemos.
+
+```py
+a = Label(root, text="Python", bg="green", fg="white")
+a.pack(fill=X, padx=10, pady=10) # se expande en X y tiene padding de 10 en X y en Y
+
+a = Label(root, text="JavaScript", bg="yellow", fg="black")
+a.pack(fill=X, side=LEFT) # se expande en X y lo ubico a la izquierda
+
+a = Label(root, text="Java", bg="red", fg="white")
+a.pack(fill=X) # se expande en X
+
+a = Label(root, text="Golang", bg="skyblue", fg="white")
+a.pack(fill=Y) # se expande en Y
+```
+
